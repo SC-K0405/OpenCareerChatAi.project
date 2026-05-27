@@ -1,3 +1,5 @@
+# applicationTest.py
+
 import streamlit as st
 from careernet import search_job
 from classifier import classify_question
@@ -70,8 +72,8 @@ if user_input:
 
     # 메모리 업데이트
     st.session_state.memory = update_memory(
-     user_input,
-      st.session_state.memory
+        user_input,
+        st.session_state.memory
     )
 
     # 프롬프트 생성
