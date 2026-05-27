@@ -18,6 +18,7 @@ params = {
 }
 
 try:
+
     response = requests.get(url, params=params)
 
     data = response.json()
@@ -26,7 +27,9 @@ try:
 
     if "dataSearch" in data:
 
-        for item in data["dataSearch"]["content"]:
+        contents = data["dataSearch"]["content"]
+
+        for item in contents:
 
             name = item.get("job_nm", "정보 없음")
             summary = item.get("summary", "설명 없음")
